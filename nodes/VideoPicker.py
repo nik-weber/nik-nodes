@@ -30,7 +30,7 @@ class VideoPicker:
         if total_files == 0:
             raise ValueError("Nenhum arquivo MP4 encontrado na pasta especificada.")
 
-        # Verifica se o número do vídeo é válido (seed 0 não tem correspondência)
+        # Verifica se o número do vídeo é válido
         if video_number < 1 or video_number > total_files:
             raise ValueError(f"Vídeo {video_number} não corresponde a nenhum arquivo disponível.")
 
@@ -38,7 +38,6 @@ class VideoPicker:
         selected_file = file_paths[video_number - 1]
         file_name = os.path.splitext(os.path.basename(selected_file))[0]
 
-        # Retorna ambos: caminho completo e nome do arquivo sem extensão
         return (selected_file, file_name)
 
     def crawl_directories(self, directory):
@@ -53,3 +52,12 @@ class VideoPicker:
                     file_paths.append(full_path)
 
         return file_paths
+
+# Registro para o ComfyUI
+NODE_CLASS_MAPPINGS = {
+    "VideoPicker": VideoPicker
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "VideoPicker": "🧪 Video Picker"
+}

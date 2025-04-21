@@ -3,7 +3,7 @@ from .nodes.VideoPicker import VideoPicker
 from .nodes.ImagePicker import ImagePicker
 from .nodes.ImageAdjustments import ImageAdjustments
 from .nodes.SubtitleNode import SubtitleNode
-from .node_select_frames_by_target_fps import SelectFramesByTargetFPS  # novo node
+from .nodes.FrameSelector import FrameSelector
 
 # Mapeamento das classes dos nodes
 NODE_CLASS_MAPPINGS = {
@@ -11,7 +11,7 @@ NODE_CLASS_MAPPINGS = {
     "ImagePicker": ImagePicker,
     "ImageAdjustments": ImageAdjustments,
     "SubtitleNode": SubtitleNode,
-    "SelectFramesByTargetFPS": SelectFramesByTargetFPS 
+    "FrameSelector": FrameSelector 
 }
 
 # Mapeamento dos nomes exibidos para os nodes
@@ -20,7 +20,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "ImagePicker": "🧪 Image Picker",
     "ImageAdjustments": "🧪 Image Adjustments",
     "SubtitleNode": "🧪 Caption Generator",
-    "SelectFramesByTargetFPS": "🎞️ Select Frames by Target FPS"  # novo
+    "FrameSelector": "🧪 Frame Selector" 
 }
 
 # Impressão estilizada de carregamento bem-sucedido

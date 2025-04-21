@@ -219,5 +219,11 @@ class SubtitleNode:
         draw.text((x, y), text, font=font, fill=font_color)
         return pil_img
 
-def node():
-    return SubtitleNode()
+# Registro para o ComfyUI
+NODE_CLASS_MAPPINGS = {
+    "SubtitleNode": SubtitleNode
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "SubtitleNode": "🧪 Caption Generator"
+}

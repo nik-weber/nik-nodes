@@ -5,8 +5,6 @@ from PIL import Image, ImageOps
 import torch
 
 def natural_sort_key(s):
-    # Esta função separa a string em partes numéricas e não-numéricas.
-    # Os números são convertidos para inteiros para comparação numérica correta.
     return [int(text) if text.isdigit() else text.lower() for text in re.split(r'(\d+)', s)]
 
 class ImagePicker:
@@ -40,14 +38,12 @@ class ImagePicker:
         if not files:
             raise ValueError("No images found in directory")
 
-        # Ordena os arquivos usando a função natural_sort_key
         files = sorted(files, key=natural_sort_key)
 
         total_files = len(files)
         current_index = (image_number - 1) % total_files
         image_path = os.path.join(directory_path, files[current_index])
 
-        # Carrega e processa a imagem
         image = Image.open(image_path)
         image = ImageOps.exif_transpose(image)
         image = image.convert('RGB')
@@ -61,3 +57,12 @@ class ImagePicker:
     @classmethod
     def IS_CHANGED(cls, image_number, **kwargs):
         return image_number
+
+# Registro para o ComfyUI
+NODE_CLASS_MAPPINGS = {
+    "ImagePicker": ImagePicker
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "ImagePicker": "🧪 Image Picker"
+}
