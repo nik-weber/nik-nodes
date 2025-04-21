@@ -25,7 +25,7 @@ class ImagePicker:
     RETURN_TYPES = ("IMAGE", "STRING")
     RETURN_NAMES = ("image", "filename")
     FUNCTION = "pick_image"
-    CATEGORY = "N!K Nodes"
+    CATEGORY = "NIK/NIK"
 
     def pick_image(self, directory_path, image_number, unique_id=None, extra_pnginfo=None):
         if not directory_path or not os.path.exists(directory_path):

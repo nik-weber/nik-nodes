@@ -16,7 +16,7 @@ class VideoPicker:
     RETURN_TYPES = ("STRING", "STRING")  # Dois outputs: caminho e nome do arquivo
     RETURN_NAMES = ("file_path", "file_name")  # Nomes dos outputs
     FUNCTION = "load_video"
-    CATEGORY = "N!K Nodes"
+    CATEGORY = "NIK/NIK"
 
     def load_video(self, directory_path, video_number):
         if not directory_path:

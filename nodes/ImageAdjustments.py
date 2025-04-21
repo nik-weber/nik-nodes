@@ -20,7 +20,7 @@ class ImageAdjustments:
 
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "adjust_image"
-    CATEGORY = "N!K Nodes"
+    CATEGORY = "NIK/NIK"
 
     def adjust_image(
         self,

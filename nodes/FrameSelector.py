@@ -19,7 +19,7 @@ class FrameSelector:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("selected_images",)
     FUNCTION = "select_frames"
-    CATEGORY = "NIK/video"
+    CATEGORY = "NIK/NIK"
 
     def select_frames(self, images, original_fps, target_fps, interpolation_multiplier):
         total_frames = len(images)

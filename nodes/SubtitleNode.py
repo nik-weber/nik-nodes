@@ -42,7 +42,7 @@ class SubtitleNode:
 
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "generate_subtitles"
-    CATEGORY = "N!K Nodes"
+    CATEGORY = "NIK/NIK"
 
     def generate_subtitles(
         self,

@@ -19,7 +19,7 @@ class VideoFormatConverter:
     RETURN_TYPES  = ("STRING", "DICT")
     RETURN_NAMES  = ("output_file", "video_info")
     FUNCTION      = "convert"
-    CATEGORY      = "N!K/video"
+    CATEGORY      = "NIK/NIK"
 
     def convert(
         self, video_path, output_path, output_name,
