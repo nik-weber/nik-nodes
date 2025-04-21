@@ -1,0 +1,13 @@
+[project]
+name = "nik-nodes"  
+description = "A collection of high-utility ComfyUI nodes by Nik"
+license = { file = "LICENSE" }
+dependencies = ["numpy", "torch", "moviepy", "whisper", "pillow"]
+
+[project.urls]
+Repository = "https://github.com/nik-weber/nik-nodes"
+
+[tool.comfy]
+PublisherId = "nik" 
+DisplayName = "NIK Nodes"
+Icon = "https://raw.githubusercontent.com/nik-weber/nik-nodes/main/icon.png"
